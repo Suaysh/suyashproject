@@ -1,0 +1,26 @@
+    <html>
+    <head>
+        <title>Setting new Expiry date of cookie</title>
+    </head>
+    <body>
+        <form action="" name="form1">
+        Name:<input type="text" name="t1">
+        <input type="button" name="btn1" value="Set_Expiry_Date" onclick="setNewDate()">
+    </form>
+    <script type="text/javascript">
+    
+        function setNewDate()
+        {
+            var expiryDate=new Date();
+            expiryDate.setMonth(expiryDate.getMonth()+1);
+            with(document.form1)
+    {
+        
+        document.cookie = "name="+t1.value;
+	document.cookie="expires="+expiryDate.toUTCString();
+        alert("Expiry date set");
+        }   
+    }
+    </script>
+    </body>
+</html>

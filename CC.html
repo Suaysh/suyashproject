@@ -1,0 +1,26 @@
+<html>
+<head><title>Create or Set Cookies Demonstration</title></head>
+<body>
+<h2>Create or Set Cookies</h2>
+<form action="" name="f1">
+Name: <input type="text" name="t1"><br><br>
+Password : <input type="password" name="t2"><br><br>
+<input type="reset" value="Create Now" onclick="newCookie()">
+</form>
+<script>
+with(document.f1){
+function newCookie(){
+if(t1.value != "" && t2.value != "" ){
+document.cookie = "name="+t1.value;
+document.cookie = "pass="+t2.value;
+alert("Cookies are created.");
+}
+else
+{
+    alert("Please enter some value");
+}
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+   <html>
+    <head>
+        <title>Demo of Deleting Cookies</title>
+    </head>
+    <body>
+  <form action="" name="form1">
+   Name:<input type="text" name="t1">
+   password:<input type="password" name="t2">
+   <input type="button" name="btn1" value="Delete Cookie" onclick="DeleteCooke()">
+    </form>
+    <script type="text/javascript">
+    
+        function DeleteCooke()
+        {
+            var expiryDate=new Date();
+            expiryDate.setMonth(expiryDate.getMonth()-1);
+            with(document.form1)
+    {
+        
+        document.cookie = "name="+t1.value;
+	document.cookie = "pass="+t2.value;
+	document.cookie="expires="+expiryDate.toUTCString();
+        alert("Cookie Deleted");
+        }   
+    }
+    </script>
+    </body>
+</html>

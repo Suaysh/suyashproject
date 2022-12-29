@@ -1,0 +1,36 @@
+<html>
+    <head>
+  <title>Linking Bannar Advertisement to URL</title>
+  <script>
+   myBannar=new Array('1.jpg','2.jpg','3.jpg');
+ myBannarLinks=new Array('www.google.com/','www.gmail.com','www.yahoo.com');
+            
+    bannerCount=0;
+  function DisplayLinks()
+   {
+ document.location.href="http://"+myBannarLinks[bannerCount];
+  }
+  function DisplayBanner()
+  {
+   if(document.images)
+    {
+   bannerCount++;
+   if(bannerCount==myBannar.length)
+    {
+     bannerCount=0;  
+     }
+   document.BannarChange.src=myBannar[bannerCount];
+   setTimeout("DisplayBanner()",2000);
+                }
+            }
+    </script>
+   <body onload="DisplayBanner()">
+    <center>
+ <h1>This is a Demo of "How to link Banner to URL"</h1>
+  <a href="javascript:DisplayLinks()">
+<img src="1.jpg" width="1000" height="200" name="BannarChange" >
+</a>
+</center>
+ </body>
+ </head>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <head><title>rollover effect</title></head>
+    <script>
+        function mouserollover(myimage){
+            myimage.src="image1.png";
+        }
+        function mouseout(myimage){
+            myimage.src="images2.jpg";
+        } 
+    </script>
+    <body>   
+    <img src="image1." width="150" height="150"
+    onmouseover="mouserollover(this)";
+    onmouseout="mouseout(this)"/>
+    </body>
+     
+</html>

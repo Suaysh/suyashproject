@@ -1,0 +1,29 @@
+<html>
+ <head>
+ <title> Demo of Slide Show</title>
+ <script>
+ mySlides=new Array('1.jpg','2.jpg','3.jpg');
+ var i=0;
+ function DisplaySlides(slideNo)
+ {
+   i=i+slideNo;
+   if(i>mySlides.length-1) 
+     {
+     i=0;   
+     }
+     if(i<0)
+     {
+     i=mySlides.length-1
+     }
+     document.slideId.src=mySlides[i]
+     }
+  </script>
+  </head>
+  <body>
+  <center>
+<img src="1.jpg" name="slideId" width="200" height="200"> <br> <br> <br>
+<input type="button" value="Back" onclick="DisplaySlides(-1)">
+<input type="button" value="Forword" onclick="DisplaySlides(1)">
+</center>
+</body>
+</html>

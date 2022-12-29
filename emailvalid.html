@@ -1,0 +1,24 @@
+<html>
+<head><title>Email Validation</title></head>
+<body>
+<form action="" name="form1">
+Enter E-mail: <input type="text" name="mail"> <br>
+<br>
+<input type="reset" value="Validate" onclick="MailCheck()">
+</form>
+<script>
+with(document.form1){
+function MailCheck(){
+    //var regEx = /^([a-zA-Z\d\._]+)@([a-z]{2,10}).([a-z]{2,3})$/;
+    //var regEx = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+    var regEx=/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+if(regEx.test(mail.value)){
+    alert ("Email is Valid");
+}
+else{
+    alert ("Mail is Invalid");
+}}}
+</script>
+</fieldset>
+</body>
+</html>
